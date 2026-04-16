@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="doc_title">Startup XYZ | LBD AI - Offline Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body { font-family: var(--font-main); background: #050a10; color: #fff; margin: 0; overflow-x: hidden; }
+    </style>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <header id="main-header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <span class="logo-text">Startup<span class="accent">XYZ</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#vision" data-i18n="nav_vision">Vision</a></li>
+                <li><a href="#chatbot" data-i18n="nav_chatbot">Chatbot</a></li>
+                <li><a href="#actualites" data-i18n="nav_actualites">Actualités</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn" id="lang-btn"><span id="current-lang-text">🇫🇷 FR</span></button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-opt" data-lang="fr">🇫🇷 FR</button>
+                        <button class="lang-opt" data-lang="en">🇬🇧 EN</button>
+                        <button class="lang-opt" data-lang="es">🇪🇸 ES</button>
+                        <button class="lang-opt" data-lang="ru">🇷🇺 RU</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge reveal" data-i18n="hero_badge">🔒 Mode Local (Offline)</div>
+                    <h1 class="reveal" data-i18n="hero_title">Intelligence Cyber avec <span class="gradient-text">LBD AI</span></h1>
+                    <p class="subtitle reveal" data-i18n="hero_subtitle">Plateforme d'analyse géopolitique locale sécurisée.</p>
+                    <div class="hero-cta reveal"><a href="#chatbot" class="btn-glow">Lancer l'analyse</a></div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="globe-container">
+                        <img src="tech_globe.png" alt="Globe" class="hero-img">
+                        <div class="pulse-ring"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chatbot" class="section section-accent">
+            <div class="container">
+                <div class="chat-layout">
+                    <div class="chat-info reveal">
+                        <div class="badge">Système Expert 5.0</div>
+                        <h2 data-i18n="chat_title">Analyse <span class="gradient-text">Géo-Tech</span></h2>
+                        <ul class="check-list">
+                            <li>Analyses multi-sources OSINT</li>
+                            <li>Contexte diplomatique</li>
+                            <li>Recommandations stratégiques</li>
+                        </ul>
+                        <div class="nexus-card">
+                            <img src="ai_avatar.png" alt="LBD AI" class="nexus-avatar-img">
+                            <div class="nexus-id">
+                                <span class="nexus-name">LBD <span class="gradient-text">AI</span></span>
+                                <span class="nexus-status">Actif & Chiffré</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-widget reveal" id="chat-widget">
+                        <div class="chat-header">
+                            <div class="chat-header-left">
+                                <img src="ai_avatar.png" alt="LBD AI" class="chat-avatar">
+                                <div><span class="chat-bot-name">LBD AI</span><span class="chat-bot-status">Prêt</span></div>
+                            </div>
+                            <div class="chat-limit-counter" id="chat-limit">Question 0/5</div>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="chat-msg bot">
+                                <img src="ai_avatar.png" alt="AI" class="msg-avatar">
+                                <div class="msg-bubble">Bonjour ! Je suis LBD AI. Comment puis-je vous aider aujourd'hui ?</div>
+                            </div>
+                        </div>
+                        <form class="chat-input-area" id="chat-form">
+                            <input type="text" id="chat-input" placeholder="Posez votre question..." autocomplete="off">
+                            <button type="submit">GO</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="section">
+            <div class="container"><h2 style="text-align:center">Notre Vision Strategique</h2></div>
+        </section>
+        
+        <section id="actualites" class="section">
+            <div class="container"><h2 style="text-align:center">Veille Locale</h2></div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container"><h2 style="text-align:center">Contact Expert</h2></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="text-align:center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2026 Startup XYZ - LBD AI Local Edition</p>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
