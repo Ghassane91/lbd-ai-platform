@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'http://localhost:5678/webhook/chat-web', // Updated to match workflow
+    n8nWebhookUrl: 'https://fancy-singers-type.loca.lt/webhook/chat-web', // Public Tunnel URL
     defaultLang: 'fr'
 };
 
