@@ -3,126 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startup XYZ | LBD AI - Solution Cyber-Géopolitique</title>
+    <title data-i18n="doc_title">LBD AI | Intelligence Géopolitique & Cybersécurité</title>
+    <meta name="description" content="LBD AI décrypte les enjeux géopolitiques de la cybersécurité mondiale. Chatbot IA, actualités en temps réel, et consulting stratégique." data-i18n-attr="content:doc_desc">
     <link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-            --primary: #00e5ff;
-            --secondary: #7000ff;
-            --bg-dark: #050a10;
-            --glass: rgba(255, 255, 255, 0.03);
-            --font-main: 'Segoe UI', Roboto, sans-serif;
-        }
-        body {
-            background-color: var(--bg-dark);
-            color: #fff;
-            font-family: var(--font-main);
-            margin: 0;
-            overflow-x: hidden;
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <canvas id="particle-canvas"></canvas>
 
     <header id="main-header">
         <nav class="container">
             <a href="#" class="logo">
-                <span class="logo-text">Startup<span class="accent">XYZ</span></span>
+                <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="16" cy="16" r="8" stroke="var(--primary)" stroke-width="2" fill="none"/>
+                    <circle cx="16" cy="16" r="3" fill="var(--primary)"/>
+                    <line x1="16" y1="2" x2="16" y2="8" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="16" y1="24" x2="16" y2="30" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="2" y1="16" x2="8" y2="16" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="24" y1="16" x2="30" y2="16" stroke="var(--primary)" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">LBD <span class="accent">AI</span></span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#chatbot">LBD AI</a></li>
-                <li><a href="#actualites">Veille</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#vision" data-i18n="nav_vision">Vision</a></li>
+                <li><a href="#chatbot" data-i18n="nav_chatbot">Chatbot</a></li>
+                <li><a href="#actualites" data-i18n="nav_actualites">Actualités</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="#chatbot" class="btn-nav" data-i18n="nav_try_bot">Essayer le Bot</a></li>
                 <li class="lang-switcher">
-                    <button class="lang-btn" id="lang-btn"><span id="current-lang-text">🇫🇷 FR</span></button>
+                    <button class="lang-btn" id="lang-btn">
+                        <span class="lang-text" id="current-lang-text">🇫🇷 FR</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
                     <div class="lang-dropdown" id="lang-dropdown">
-                        <button class="lang-opt" data-lang="fr">🇫🇷 FR</button>
-                        <button class="lang-opt" data-lang="en">🇬🇧 EN</button>
-                        <button class="lang-opt" data-lang="es">🇪🇸 ES</button>
+                        <button class="lang-opt" data-lang="fr"><span>🇫🇷</span> Français</button>
+                        <button class="lang-opt" data-lang="en"><span>🇬🇧</span> English</button>
+                        <button class="lang-opt" data-lang="es"><span>🇪🇸</span> Español</button>
+                        <button class="lang-opt" data-lang="ru"><span>🇷🇺</span> Русский</button>
                     </div>
                 </li>
             </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section id="hero">
+            <div class="hero-bg-glow"></div>
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <div class="badge reveal">🔒 Sécurité Niveau Militaire</div>
-                    <h1 class="reveal">L'Intelligence <span class="gradient-text">Géo-Spatiale</span> au service de votre Cyber-Défense.</h1>
-                    <p class="subtitle reveal">Analysez les tensions internationales et anticipez les menaces cyber avec LBD AI, notre plateforme d'intelligence de pointe.</p>
-                    <div class="hero-cta reveal">
-                        <a href="#chatbot" class="btn-glow">Essayer le Bot</a>
-                        <a href="#vision" class="btn-outline">En savoir plus</a>
+                    <div class="badge reveal" data-i18n="hero_badge">🔒 Plateforme N°1 d'Intelligence Cyber</div>
+                    <h1 class="reveal reveal-delay-1" data-i18n="hero_title">
+                        Protégez votre entreprise des <span class="gradient-text">cybermenaces mondiales</span>
+                    </h1>
+                    <p class="subtitle reveal reveal-delay-2" data-i18n="hero_subtitle">
+                        Rejoignez +500 entreprises qui utilisent notre IA pour anticiper les attaques, décrypter la géopolitique cyber et garder un temps d'avance.
+                    </p>
+                    <div class="hero-cta reveal reveal-delay-3">
+                        <a href="#chatbot" class="btn-glow">
+                            <span data-i18n="hero_btn_start">Essai Gratuit — Sans Engagement</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#contact" class="btn-outline" data-i18n="hero_btn_expert">Demander une Démo</a>
+                    </div>
+                    <div class="hero-stats reveal reveal-delay-3">
+                        <div class="stat">
+                            <strong>12K+</strong>
+                            <span data-i18n="hero_stat_threats">Menaces bloquées / mois</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <strong>98%</strong>
+                            <span data-i18n="hero_stat_countries">Taux de détection</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <strong>&lt;3s</strong>
+                            <span data-i18n="hero_stat_monitoring">Temps de réponse IA</span>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-visual reveal">
+                <div class="hero-visual reveal reveal-delay-2">
                     <div class="globe-container">
-                        <img src="tech_globe.png" alt="Cyber Globe" class="hero-img">
+                        <img src="tech_globe.png" alt="Globe Cyber Géopolitique" class="hero-img">
                         <div class="pulse-ring"></div>
+                        <div class="pulse-ring delay-1"></div>
+                        <div class="pulse-ring delay-2"></div>
                     </div>
                 </div>
             </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
         </section>
 
-        <!-- Vision Section -->
-        <section id="vision" class="section section-accent">
+        <!-- Vision -->
+        <section id="vision" class="section">
             <div class="container">
-                <h2 class="section-title reveal">Notre <span class="gradient-text">Vision</span></h2>
-                <div class="vision-grid">
-                    <div class="vision-card reveal">
-                        <div class="card-icon">🛰️</div>
-                        <h3>Anticipation Stratégique</h3>
-                        <p>Nous surveillons les signaux faibles pour prédire les mouvements géopolitiques complexes.</p>
+                <div class="section-header-center reveal">
+                    <div class="badge" data-i18n="vision_badge">Notre Vision</div>
+                    <h2 data-i18n="vision_title">L'intelligence au service de la <span class="gradient-text">cyberdéfense</span></h2>
+                    <p class="section-subtitle" data-i18n="vision_subtitle">Trois piliers pour anticiper les menaces numériques de demain.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="20" stroke="var(--primary)" stroke-width="2" fill="none" opacity="0.2"/><circle cx="24" cy="24" r="12" stroke="var(--primary)" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="4" fill="var(--primary)"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="var(--primary)" stroke-width="1.5"/></svg>
+                        </div>
+                        <h3 data-i18n="feat1_title">Analyse Globale</h3>
+                        <p data-i18n="feat1_desc">Vision 360° des conflits numériques entre puissances mondiales. Cartographie des groupes APT et de leurs affiliations étatiques.</p>
+                        <div class="feature-number">01</div>
                     </div>
-                    <div class="vision-card reveal">
-                        <div class="card-icon">🛡️</div>
-                        <h3>Protection Avancée</h3>
-                        <p>Une sécurisation de vos actifs numériques basée sur le contexte mondial réel.</p>
+                    <div class="feature-card reveal reveal-delay-1">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><path d="M24 4L4 24l20 20 20-20L24 4z" stroke="var(--accent)" stroke-width="2" fill="none" opacity="0.2"/><path d="M24 12l-12 12 12 12 12-12-12-12z" stroke="var(--accent)" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="4" fill="var(--accent)"/></svg>
+                        </div>
+                        <h3 data-i18n="feat2_title">Réponse Instantanée</h3>
+                        <p data-i18n="feat2_desc">Notre IA traite des milliers de sources OSINT pour fournir des analyses contextuelles en moins de 10 secondes.</p>
+                        <div class="feature-number">02</div>
                     </div>
-                    <div class="vision-card reveal">
-                        <div class="card-icon">📊</div>
-                        <h3>Analyse de Données</h3>
-                        <p>Des rapports détaillés exploitant la puissance de l'IA générative locale.</p>
+                    <div class="feature-card reveal reveal-delay-2">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><path d="M24 4v40" stroke="var(--green)" stroke-width="2"/><path d="M12 16l12-12 12 12" stroke="var(--green)" stroke-width="2" fill="none"/><circle cx="24" cy="32" r="8" stroke="var(--green)" stroke-width="2" fill="none" opacity="0.3"/><circle cx="24" cy="32" r="4" fill="var(--green)"/></svg>
+                        </div>
+                        <h3 data-i18n="feat3_title">Anticipation Stratégique</h3>
+                        <p data-i18n="feat3_desc">Prévoyez les tendances cyber-géopolitiques de demain grâce à notre moteur de prédiction alimenté par l'IA.</p>
+                        <div class="feature-number">03</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Chatbot Section -->
-        <section id="chatbot" class="section">
+        <section id="chatbot" class="section section-accent">
             <div class="container">
                 <div class="chat-layout">
                     <div class="chat-info reveal">
-                        <div class="badge">Système Expert 5.5</div>
-                        <h2>Discutez avec <span class="gradient-text">LBD AI</span></h2>
-                        <p>Une IA entraînée spécifiquement pour les enjeux cyber-géopolitiques. Réponses factuelles et précises.</p>
-                        
-                        <div class="nexus-card">
-                            <img src="ai_avatar.png" alt="LBD AI" class="nexus-avatar-img">
+                        <div class="badge" data-i18n="chat_badge">Chatbot GeoTech</div>
+                        <h2 data-i18n="chat_title">Votre analyste cyber <span class="gradient-text">disponible 24/7</span></h2>
+                        <p data-i18n="chat_p">Posez n'importe quelle question sur les cyber-menaces actuelles et recevez une analyse contextuelle profonde.</p>
+                        <ul class="check-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-i18n="chat_check1">Analyse multi-sources OSINT</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-i18n="chat_check2">Contexte diplomatique &amp; militaire</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-i18n="chat_check3">Indicateurs de compromission (IoC)</span>
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                                <span data-i18n="chat_check4">Recommandations stratégiques</span>
+                            </li>
+                        </ul>
+
+                        <!-- LBD AI Identity Card -->
+                        <div class="nexus-card reveal reveal-delay-2">
+                            <div class="nexus-avatar-wrap">
+                                <div class="nexus-avatar-ring"></div>
+                                <div class="nexus-avatar-ring delay-1"></div>
+                                <img src="ai_avatar.png" alt="LBD AI" class="nexus-avatar-img">
+                                <div class="nexus-scan-line"></div>
+                            </div>
                             <div class="nexus-id">
                                 <span class="nexus-name">LBD <span class="gradient-text">AI</span></span>
-                                <span class="nexus-status-label"><i class="nexus-dot"></i> Analyste Senior</span>
+                                <span class="nexus-status"><i class="nexus-dot"></i> Système Actif — v4.1</span>
+                                <span class="nexus-model">Geo-Tech Workflow × n8n</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="chat-widget reveal">
+                    <!-- Custom Chat Widget -->
+                    <div class="chat-widget reveal reveal-delay-1" id="chat-widget">
                         <div class="chat-header">
                             <div class="chat-header-left">
-                                <img src="ai_avatar.png" alt="AI" class="chat-avatar">
+                                <img src="ai_avatar.png" alt="LBD AI" class="chat-avatar">
                                 <div>
                                     <span class="chat-bot-name">LBD AI</span>
-                                    <span class="chat-bot-status">Connecté au tunnel</span>
+                                    <span class="chat-bot-status" id="bot-status-text">Analyste Géo-Tech</span>
                                 </div>
                             </div>
                             <div class="chat-limit-counter" id="chat-limit">Question 0/5</div>
@@ -130,53 +200,179 @@
                         <div class="chat-messages" id="chat-messages">
                             <div class="chat-msg bot">
                                 <img src="ai_avatar.png" alt="AI" class="msg-avatar">
-                                <div class="msg-bubble">Bonjour ! Je suis LBD AI. Prête pour l'analyse stratégique. Quelle est votre question ?</div>
+                                <div class="msg-bubble">Bonjour ! Je suis LBD AI, votre analyste cyber-géopolitique. Posez-moi n'importe quelle question sur les enjeux géopolitiques des technologies.</div>
                             </div>
                         </div>
                         <form class="chat-input-area" id="chat-form">
-                            <input type="text" id="chat-input" placeholder="Posez une question technique..." autocomplete="off">
-                            <button type="submit">OK</button>
+                            <input type="text" id="chat-input" placeholder="Posez votre question à LBD AI..." autocomplete="off" data-i18n-attr="placeholder:bot_placeholder">
+                            <button type="submit" id="chat-submit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Actualités Section -->
-        <section id="actualites" class="section section-accent">
+        <!-- News -->
+        <section id="actualites" class="section">
             <div class="container">
-                <h2 class="section-title">Veille <span class="gradient-text">Technologique</span></h2>
+                <div class="section-header-row reveal">
+                    <div>
+                        <div class="badge" data-i18n="news_badge">Veille Stratégique</div>
+                        <h2 data-i18n="news_title">Actualités Cyber <span class="gradient-text">Mondiales</span></h2>
+                    </div>
+                    <div class="news-controls">
+                        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Tout</button>
+                        <button class="filter-btn" data-filter="cyber" data-i18n="filter_cyber">Cyber</button>
+                        <button class="filter-btn" data-filter="geopolitique" data-i18n="filter_geo">Géopolitique</button>
+                    </div>
+                </div>
+                <div class="alert-banner glass reveal">
+                    <div class="alert-pulse"></div>
+                    <span class="alert-tag">LIVE</span>
+                    <p id="live-ticker" data-i18n="alert_ticker_loading">Chargement des alertes en temps réel...</p>
+                </div>
                 <div class="news-grid" id="news-grid">
-                    <div class="news-card">
-                        <div class="news-tag">CYBER</div>
-                        <h3>Renforcement des sanctions numériques</h3>
-                        <p>L'UE annonce de nouvelles mesures pour la souveraineté technologique.</p>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-tag">IA</div>
-                        <h3>Gemma 3 : Le futur de l'IA locale</h3>
-                        <p>Analyse des performances du nouveau modèle de Google en environnement fermé.</p>
-                    </div>
+                    <div class="news-skeleton glass"></div>
+                    <div class="news-skeleton glass"></div>
+                    <div class="news-skeleton glass"></div>
+                    <div class="news-skeleton glass"></div>
+                    <div class="news-skeleton glass"></div>
+                    <div class="news-skeleton glass"></div>
+                </div>
+                <div class="news-footer reveal">
+                    <p class="news-update-time"><span data-i18n="news_last_update">Dernière mise à jour</span> : <span id="last-update">--</span></p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
+        <!-- Contact -->
+        <section id="contact" class="section section-accent">
             <div class="container">
-                <div class="glass-panel contact-panel">
-                    <h2>Besoin d'une <span class="gradient-text">expertise dédiée ?</span></h2>
-                    <p>Contactez nos consultants pour une analyse personnalisée de vos risques.</p>
-                    <a href="mailto:contact@startupxyz.com" class="btn-glow">Nous Contacter</a>
+                <div class="contact-layout">
+                    <div class="contact-info reveal">
+                        <div class="badge" data-i18n="contact_badge">Contact</div>
+                        <h2 data-i18n="contact_title">Parlez à un <span class="gradient-text">Expert</span></h2>
+                        <p data-i18n="contact_p">Remplissez le formulaire et un consultant spécialisé en cybersécurité &amp; géopolitique vous recontactera sous <strong>24 heures</strong>.</p>
+                        <div class="contact-highlights">
+                            <div class="highlight-item">
+                                <div class="highlight-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                </div>
+                                <div>
+                                    <strong data-i18n="hlight1_title">Réponse en 24h</strong>
+                                    <span data-i18n="hlight1_desc">Un expert vous rappelle</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div>
+                                    <strong data-i18n="hlight2_title">Confidentiel</strong>
+                                    <span data-i18n="hlight2_desc">Données sécurisées</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <div class="highlight-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <div>
+                                    <strong data-i18n="hlight3_title">Consultation sur mesure</strong>
+                                    <span data-i18n="hlight3_desc">Adapté à votre secteur</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper reveal reveal-delay-1">
+                        <form id="contact-form" class="glass">
+                            <div class="form-group">
+                                <label for="name" data-i18n="form_name">Nom complet</label>
+                                <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email" data-i18n="form_email">Email professionnel</label>
+                                    <input type="email" id="email" name="email" required placeholder="jean@entreprise.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" data-i18n="form_phone">Téléphone</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company" data-i18n="form_company">Entreprise / Organisation</label>
+                                <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-i18n="form_subject">Sujet</label>
+                                <select id="subject" name="subject">
+                                    <option value="" data-i18n="form_subject_opt">Sélectionnez un sujet</option>
+                                    <option value="audit">Audit Cybersécurité</option>
+                                    <option value="veille">Veille Géopolitique</option>
+                                    <option value="chatbot">Intégration Chatbot IA</option>
+                                    <option value="formation">Formation &amp; Sensibilisation</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="form_msg">Message</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-glow btn-full" id="submit-btn" data-i18n="form_btn">
+                                <span>Être contacté par un expert du domaine souhaité</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </button>
+                            <p class="form-note" data-i18n="form_note">🔒 Vos données sont traitées confidentiellement. Réponse garantie sous 24h ouvrées.</p>
+                        </form>
+                        <div class="form-success glass" id="form-success" style="display:none;">
+                            <div class="success-icon">✓</div>
+                            <h3>Message envoyé !</h3>
+                            <p>Un consultant LBD AI vous recontactera dans les <strong>24 heures</strong>.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Startup XYZ. Tous droits réservés. LBD AI Platform.</p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 32 32" width="24" height="24"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/><circle cx="16" cy="16" r="8" stroke="var(--primary)" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="3" fill="var(--primary)"/></svg>
+                    <span class="logo-text">LBD <span class="accent">AI</span></span>
+                </a>
+                <p data-i18n="footer_desc">L'intelligence cyber-géopolitique de demain, accessible aujourd'hui.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col1">Produit</h4>
+                <a href="#chatbot" data-i18n="nav_chatbot">Chatbot IA</a>
+                <a href="#actualites" data-i18n="nav_actualites">News Feed</a>
+                <a href="#">API</a>
+                <a href="#">Documentation</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col2">Société</h4>
+                <a href="#" data-i18n="footer_about">À propos</a>
+                <a href="#" data-i18n="footer_careers">Carrières</a>
+                <a href="#" data-i18n="footer_press">Presse</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_col3">Légal</h4>
+                <a href="#" data-i18n="footer_legal">Mentions légales</a>
+                <a href="#" data-i18n="footer_privacy">Politique de confidentialité</a>
+                <a href="#" data-i18n="footer_terms">CGU</a>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p data-i18n="footer_copy">&copy; 2026 LBD AI. Tous droits réservés.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Twitter">𝕏</a>
+                <a href="#" aria-label="GitHub">gh</a>
             </div>
         </div>
     </footer>
