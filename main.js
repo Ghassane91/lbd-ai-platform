@@ -17,7 +17,7 @@ if (!SESSION_ID) {
 
 const TRANSLATIONS = {
     fr: {
-        doc_title: "LBD AI | Intelligence Géopolitique & Cybersécurité",
+        doc_title: "Khorba3 | Intelligence Géopolitique & Cybersécurité",
         doc_desc: "LBD AI décrypte les enjeux géopolitiques de la cybersécurité mondiale.",
         nav_vision: "Vision", nav_chatbot: "Chatbot", nav_actualites: "Actualités",
         nav_contact: "Contact", nav_try_bot: "Essayer le Bot",
@@ -55,11 +55,11 @@ const TRANSLATIONS = {
         footer_col1: "Produit", footer_col2: "Société", footer_col3: "Légal",
         footer_about: "À propos", footer_careers: "Carrières", footer_press: "Presse",
         footer_legal: "Mentions légales", footer_privacy: "Politique de confidentialité", footer_terms: "CGU",
-        footer_copy: "© 2026 LBD AI. Tous droits réservés.",
-        bot_placeholder: "Posez votre question géopolitique..."
+        footer_copy: "© 2026 Khorba3. Tous droits réservés.",
+        bot_placeholder: "Posez votre question à Khorba3..."
     },
     en: {
-        doc_title: "LBD AI | Geopolitical Intelligence & Cybersecurity",
+        doc_title: "Khorba3 | Geopolitical Intelligence & Cybersecurity",
         nav_vision: "Vision", nav_chatbot: "Chatbot", nav_actualites: "News",
         nav_contact: "Contact", nav_try_bot: "Try the Bot",
         hero_badge: "🔒 #1 Cyber Intelligence Platform",
@@ -96,8 +96,8 @@ const TRANSLATIONS = {
         footer_col1: "Product", footer_col2: "Company", footer_col3: "Legal",
         footer_about: "About", footer_careers: "Careers", footer_press: "Press",
         footer_legal: "Legal notice", footer_privacy: "Privacy policy", footer_terms: "Terms of use",
-        footer_copy: "© 2026 LBD AI. All rights reserved.",
-        bot_placeholder: "Ask your geopolitical question..."
+        footer_copy: "© 2026 Khorba3. All rights reserved.",
+        bot_placeholder: "Ask Khorba3 your question..."
     },
     es: {
         doc_title: "LBD AI | Inteligencia Geopolítica & Ciberseguridad",
