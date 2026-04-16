@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="doc_title">Startup XYZ | LBD AI - Offline Intelligence</title>
+    <title>Startup XYZ | LBD AI - Solution Cyber-Géopolitique</title>
     <link rel="stylesheet" href="style.css">
     <style>
         :root {
-            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --primary: #00e5ff;
+            --secondary: #7000ff;
+            --bg-dark: #050a10;
+            --glass: rgba(255, 255, 255, 0.03);
+            --font-main: 'Segoe UI', Roboto, sans-serif;
         }
-        body { font-family: var(--font-main); background: #050a10; color: #fff; margin: 0; overflow-x: hidden; }
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: var(--font-main);
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body>
@@ -21,17 +36,16 @@
                 <span class="logo-text">Startup<span class="accent">XYZ</span></span>
             </a>
             <ul class="nav-links">
-                <li><a href="#vision" data-i18n="nav_vision">Vision</a></li>
-                <li><a href="#chatbot" data-i18n="nav_chatbot">Chatbot</a></li>
-                <li><a href="#actualites" data-i18n="nav_actualites">Actualités</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#chatbot">LBD AI</a></li>
+                <li><a href="#actualites">Veille</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li class="lang-switcher">
                     <button class="lang-btn" id="lang-btn"><span id="current-lang-text">🇫🇷 FR</span></button>
                     <div class="lang-dropdown" id="lang-dropdown">
                         <button class="lang-opt" data-lang="fr">🇫🇷 FR</button>
                         <button class="lang-opt" data-lang="en">🇬🇧 EN</button>
                         <button class="lang-opt" data-lang="es">🇪🇸 ES</button>
-                        <button class="lang-opt" data-lang="ru">🇷🇺 RU</button>
                     </div>
                 </li>
             </ul>
@@ -39,82 +53,131 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
-                    <div class="badge reveal" data-i18n="hero_badge">🔒 Mode Local (Offline)</div>
-                    <h1 class="reveal" data-i18n="hero_title">Intelligence Cyber avec <span class="gradient-text">LBD AI</span></h1>
-                    <p class="subtitle reveal" data-i18n="hero_subtitle">Plateforme d'analyse géopolitique locale sécurisée.</p>
-                    <div class="hero-cta reveal"><a href="#chatbot" class="btn-glow">Lancer l'analyse</a></div>
+                    <div class="badge reveal">🔒 Sécurité Niveau Militaire</div>
+                    <h1 class="reveal">L'Intelligence <span class="gradient-text">Géo-Spatiale</span> au service de votre Cyber-Défense.</h1>
+                    <p class="subtitle reveal">Analysez les tensions internationales et anticipez les menaces cyber avec LBD AI, notre plateforme d'intelligence de pointe.</p>
+                    <div class="hero-cta reveal">
+                        <a href="#chatbot" class="btn-glow">Essayer le Bot</a>
+                        <a href="#vision" class="btn-outline">En savoir plus</a>
+                    </div>
                 </div>
                 <div class="hero-visual reveal">
                     <div class="globe-container">
-                        <img src="tech_globe.png" alt="Globe" class="hero-img">
+                        <img src="tech_globe.png" alt="Cyber Globe" class="hero-img">
                         <div class="pulse-ring"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="chatbot" class="section section-accent">
+        <!-- Vision Section -->
+        <section id="vision" class="section section-accent">
+            <div class="container">
+                <h2 class="section-title reveal">Notre <span class="gradient-text">Vision</span></h2>
+                <div class="vision-grid">
+                    <div class="vision-card reveal">
+                        <div class="card-icon">🛰️</div>
+                        <h3>Anticipation Stratégique</h3>
+                        <p>Nous surveillons les signaux faibles pour prédire les mouvements géopolitiques complexes.</p>
+                    </div>
+                    <div class="vision-card reveal">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Protection Avancée</h3>
+                        <p>Une sécurisation de vos actifs numériques basée sur le contexte mondial réel.</p>
+                    </div>
+                    <div class="vision-card reveal">
+                        <div class="card-icon">📊</div>
+                        <h3>Analyse de Données</h3>
+                        <p>Des rapports détaillés exploitant la puissance de l'IA générative locale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot" class="section">
             <div class="container">
                 <div class="chat-layout">
                     <div class="chat-info reveal">
-                        <div class="badge">Système Expert 5.0</div>
-                        <h2 data-i18n="chat_title">Analyse <span class="gradient-text">Géo-Tech</span></h2>
-                        <ul class="check-list">
-                            <li>Analyses multi-sources OSINT</li>
-                            <li>Contexte diplomatique</li>
-                            <li>Recommandations stratégiques</li>
-                        </ul>
+                        <div class="badge">Système Expert 5.5</div>
+                        <h2>Discutez avec <span class="gradient-text">LBD AI</span></h2>
+                        <p>Une IA entraînée spécifiquement pour les enjeux cyber-géopolitiques. Réponses factuelles et précises.</p>
+                        
                         <div class="nexus-card">
                             <img src="ai_avatar.png" alt="LBD AI" class="nexus-avatar-img">
                             <div class="nexus-id">
                                 <span class="nexus-name">LBD <span class="gradient-text">AI</span></span>
-                                <span class="nexus-status">Actif & Chiffré</span>
+                                <span class="nexus-status-label"><i class="nexus-dot"></i> Analyste Senior</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="chat-widget reveal" id="chat-widget">
+
+                    <div class="chat-widget reveal">
                         <div class="chat-header">
                             <div class="chat-header-left">
-                                <img src="ai_avatar.png" alt="LBD AI" class="chat-avatar">
-                                <div><span class="chat-bot-name">LBD AI</span><span class="chat-bot-status">Prêt</span></div>
+                                <img src="ai_avatar.png" alt="AI" class="chat-avatar">
+                                <div>
+                                    <span class="chat-bot-name">LBD AI</span>
+                                    <span class="chat-bot-status">Connecté au tunnel</span>
+                                </div>
                             </div>
                             <div class="chat-limit-counter" id="chat-limit">Question 0/5</div>
                         </div>
                         <div class="chat-messages" id="chat-messages">
                             <div class="chat-msg bot">
                                 <img src="ai_avatar.png" alt="AI" class="msg-avatar">
-                                <div class="msg-bubble">Bonjour ! Je suis LBD AI. Comment puis-je vous aider aujourd'hui ?</div>
+                                <div class="msg-bubble">Bonjour ! Je suis LBD AI. Prête pour l'analyse stratégique. Quelle est votre question ?</div>
                             </div>
                         </div>
                         <form class="chat-input-area" id="chat-form">
-                            <input type="text" id="chat-input" placeholder="Posez votre question..." autocomplete="off">
-                            <button type="submit">GO</button>
+                            <input type="text" id="chat-input" placeholder="Posez une question technique..." autocomplete="off">
+                            <button type="submit">OK</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="vision" class="section">
-            <div class="container"><h2 style="text-align:center">Notre Vision Strategique</h2></div>
-        </section>
-        
-        <section id="actualites" class="section">
-            <div class="container"><h2 style="text-align:center">Veille Locale</h2></div>
+        <!-- Actualités Section -->
+        <section id="actualites" class="section section-accent">
+            <div class="container">
+                <h2 class="section-title">Veille <span class="gradient-text">Technologique</span></h2>
+                <div class="news-grid" id="news-grid">
+                    <div class="news-card">
+                        <div class="news-tag">CYBER</div>
+                        <h3>Renforcement des sanctions numériques</h3>
+                        <p>L'UE annonce de nouvelles mesures pour la souveraineté technologique.</p>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-tag">IA</div>
+                        <h3>Gemma 3 : Le futur de l'IA locale</h3>
+                        <p>Analyse des performances du nouveau modèle de Google en environnement fermé.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section">
-            <div class="container"><h2 style="text-align:center">Contact Expert</h2></div>
+            <div class="container">
+                <div class="glass-panel contact-panel">
+                    <h2>Besoin d'une <span class="gradient-text">expertise dédiée ?</span></h2>
+                    <p>Contactez nos consultants pour une analyse personnalisée de vos risques.</p>
+                    <a href="mailto:contact@startupxyz.com" class="btn-glow">Nous Contacter</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="container" style="text-align:center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p>&copy; 2026 Startup XYZ - LBD AI Local Edition</p>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Startup XYZ. Tous droits réservés. LBD AI Platform.</p>
+            </div>
         </div>
     </footer>
 
