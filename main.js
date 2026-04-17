@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://cruel-lights-live.loca.lt/webhook/chat-web',
+    n8nWebhookUrl: 'https://witty-tires-thank.loca.lt/webhook/chat-web',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
