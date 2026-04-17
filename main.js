@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://rob-mag-tears-spell.trycloudflare.com/webhook/geotech-bot-webhook',
+    n8nWebhookUrl: 'https://across-immediate-moments-hampton.trycloudflare.com/webhook/geotech-bot-webhook',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
