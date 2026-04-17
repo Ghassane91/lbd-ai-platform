@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://witty-tires-thank.loca.lt/webhook/chat-web',
+    n8nWebhookUrl: 'https://rob-mag-tears-spell.trycloudflare.com/webhook/chat-web',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
