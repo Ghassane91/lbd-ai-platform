@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales d'Utilisation — Khorba3</title>
+    <meta name="description" content="Conditions Générales d'Utilisation de la plateforme Khorba3. Conformes aux normes RGPD, PIPEDA, Loi 25 (Québec) et ISO 27001/27005.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-page { padding: 8rem 0 5rem; min-height: 100vh; }
+        .legal-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 600; margin-bottom: 2.5rem; transition: var(--transition); font-size: 0.9rem; text-decoration: none; }
+        .legal-back:hover { gap: 0.8rem; }
+        .legal-hero { margin-bottom: 3rem; }
+        .legal-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 1rem; margin-bottom: 0.5rem; }
+        .legal-hero .last-update { color: var(--text-muted); font-size: 0.85rem; font-family: var(--mono); }
+        .legal-body { display: flex; gap: 3rem; align-items: flex-start; }
+        .legal-nav { position: sticky; top: 6rem; width: 260px; flex-shrink: 0; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 1.5rem; }
+        .legal-nav h4 { color: var(--primary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .legal-nav a { display: block; color: var(--text-muted); font-size: 0.85rem; padding: 0.4rem 0; border-left: 2px solid transparent; padding-left: 0.8rem; margin-left: -0.8rem; transition: 0.2s; text-decoration: none; }
+        .legal-nav a:hover { color: var(--primary); border-left-color: var(--primary); padding-left: 1rem; }
+        .legal-content { flex: 1; max-width: 780px; }
+        .legal-section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--glass-border); }
+        .legal-section:last-child { border-bottom: none; }
+        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--text); display: flex; align-items: center; gap: 0.8rem; }
+        .legal-section h2 .section-num { color: var(--primary); font-family: var(--mono); font-size: 1rem; }
+        .legal-section h3 { font-size: 1.1rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+        .legal-section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; font-size: 0.95rem; }
+        .legal-section ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+        .legal-section ul li { color: var(--text-muted); padding: 0.4rem 0 0.4rem 1.5rem; position: relative; font-size: 0.95rem; line-height: 1.7; }
+        .legal-section ul li::before { content: '›'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+        .info-box { background: rgba(0, 229, 255, 0.04); border: 1px solid rgba(0, 229, 255, 0.15); border-radius: var(--radius-sm); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+        .info-box p { margin: 0; color: var(--text); }
+        .warn-box { background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: var(--radius-sm); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+        .warn-box p { margin: 0; color: #fbbf24; }
+        .norm-badge { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; font-family: var(--mono); letter-spacing: 1px; margin-right: 0.4rem; margin-bottom: 0.8rem; }
+        .norm-eu { background: rgba(0, 112, 240, 0.15); color: #4da6ff; border: 1px solid rgba(0, 112, 240, 0.3); }
+        .norm-ca { background: rgba(229, 35, 35, 0.12); color: #ff7070; border: 1px solid rgba(229, 35, 35, 0.25); }
+        .norm-iso { background: rgba(124, 58, 237, 0.15); color: #a78bfa; border: 1px solid rgba(124, 58, 237, 0.3); }
+        .legal-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+        .legal-table th { background: rgba(0,229,255,0.06); color: var(--primary); padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--glass-border); font-weight: 600; }
+        .legal-table td { padding: 0.8rem 1rem; color: var(--text-muted); border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+        .legal-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .version-box { background: rgba(124,58,237,0.06); border: 1px solid rgba(124,58,237,0.2); border-radius: var(--radius-sm); padding: 1rem 1.5rem; margin-bottom: 2rem; font-size:0.85rem; color: var(--text-muted); }
+        @media (max-width: 900px) { .legal-body { flex-direction: column; } .legal-nav { position: static; width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <header id="main-header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="16" cy="16" r="8" stroke="var(--primary)" stroke-width="2" fill="none"/>
+                    <circle cx="16" cy="16" r="3" fill="var(--primary)"/>
+                    <line x1="16" y1="2" x2="16" y2="8" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="16" y1="24" x2="16" y2="30" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="2" y1="16" x2="8" y2="16" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="24" y1="16" x2="30" y2="16" stroke="var(--primary)" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">Khorba<span class="accent">3</span></span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="legal-page">
+        <div class="container">
+            <a href="index.html" class="legal-back">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                Retour à l'accueil
+            </a>
+
+            <div class="legal-hero">
+                <div class="badge">Réglementation</div>
+                <h1>Conditions Générales <span class="gradient-text">d'Utilisation</span></h1>
+                <p class="last-update">Dernière mise à jour : 17 Avril 2026 — Version 1.0</p>
+                <div style="margin-top:1rem;">
+                    <span class="norm-badge norm-eu">RGPD / EU 2016/679</span>
+                    <span class="norm-badge norm-eu">AI Act (EU 2024/1689)</span>
+                    <span class="norm-badge norm-ca">PIPEDA · Loi 25 (Québec)</span>
+                    <span class="norm-badge norm-iso">ISO 27001:2022</span>
+                    <span class="norm-badge norm-iso">ISO 27005:2022</span>
+                </div>
+            </div>
+
+            <div class="version-box">
+                ℹ️ Ces CGU constituent un contrat juridiquement contraignant entre vous (l'Utilisateur) et Khorba3 (l'Éditeur). En accédant à la plateforme ou en utilisant ses services, vous acceptez l'intégralité des présentes conditions.
+            </div>
+
+            <div class="legal-body">
+                <nav class="legal-nav">
+                    <h4>Sommaire</h4>
+                    <a href="#objet">1. Objet</a>
+                    <a href="#definitions">2. Définitions</a>
+                    <a href="#acceptation">3. Acceptation</a>
+                    <a href="#services">4. Description des services</a>
+                    <a href="#acces">5. Accès & Compte</a>
+                    <a href="#ia-usage">6. Usage de l'IA (AI Act)</a>
+                    <a href="#donnees-cgu">7. Données personnelles</a>
+                    <a href="#securite-cgu">8. Sécurité ISO 27001</a>
+                    <a href="#propriete-cgu">9. Propriété intellectuelle</a>
+                    <a href="#conduite">10. Règles de conduite</a>
+                    <a href="#responsabilite-cgu">11. Responsabilité</a>
+                    <a href="#modifications">12. Modifications</a>
+                    <a href="#resiliation">13. Résiliation</a>
+                    <a href="#droit-cgu">14. Droit applicable</a>
+                    <a href="#contact-cgu">15. Contact</a>
+                </nav>
+
+                <div class="legal-content">
+
+                    <div class="legal-section" id="objet">
+                        <h2><span class="section-num">01</span> Objet</h2>
+                        <p>Les présentes Conditions Générales d'Utilisation (ci-après "CGU") ont pour objet de définir les règles et conditions dans lesquelles les utilisateurs (ci-après "Utilisateurs") peuvent accéder et utiliser la plateforme <strong>Khorba3</strong> et ses services associés, notamment le chatbot d'intelligence artificielle <strong>LBD AI</strong>.</p>
+                        <p>Ces CGU sont rédigées en conformité avec :</p>
+                        <ul>
+                            <li>Le Règlement Général sur la Protection des Données (RGPD — UE 2016/679)</li>
+                            <li>Le Règlement européen sur l'Intelligence Artificielle (AI Act — UE 2024/1689)</li>
+                            <li>La Loi canadienne sur la Protection des Renseignements Personnels et les Documents Électroniques (PIPEDA)</li>
+                            <li>La Loi 25 du Québec (modernisation de la protection des renseignements personnels)</li>
+                            <li>Les normes ISO 27001:2022 et ISO 27005:2022 relatives à la sécurité de l'information</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section" id="definitions">
+                        <h2><span class="section-num">02</span> Définitions</h2>
+                        <table class="legal-table">
+                            <tr><th>Terme</th><th>Définition</th></tr>
+                            <tr><td><strong>Plateforme</strong></td><td>L'ensemble du site web Khorba3 et de ses fonctionnalités accessibles à l'URL officielle.</td></tr>
+                            <tr><td><strong>Utilisateur</strong></td><td>Toute personne physique ou morale qui accède à la Plateforme.</td></tr>
+                            <tr><td><strong>LBD AI</strong></td><td>Le système de chatbot basé sur une intelligence artificielle locale (Ollama / Gemma) intégré à la Plateforme.</td></tr>
+                            <tr><td><strong>Éditeur</strong></td><td>Khorba3, représenté par son administrateur responsable du traitement.</td></tr>
+                            <tr><td><strong>Données personnelles</strong></td><td>Tout renseignement permettant d'identifier directement ou indirectement une personne physique, au sens du RGPD Art. 4(1) et de la PIPEDA.</td></tr>
+                            <tr><td><strong>DPO</strong></td><td>Délégué à la Protection des Données (Data Protection Officer).</td></tr>
+                            <tr><td><strong>Incident de sécurité</strong></td><td>Tout événement compromettant la confidentialité, l'intégrité ou la disponibilité des données, au sens de l'ISO 27001.</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="legal-section" id="acceptation">
+                        <h2><span class="section-num">03</span> Acceptation des conditions</h2>
+                        <p>L'accès et l'utilisation de la Plateforme impliquent l'acceptation pleine et entière des présentes CGU. Cette acceptation est matérialisée par :</p>
+                        <ul>
+                            <li>Le simple fait de naviguer sur la Plateforme.</li>
+                            <li>L'utilisation du chatbot LBD AI (envoi d'un premier message).</li>
+                            <li>La soumission du formulaire de contact.</li>
+                        </ul>
+                        <div class="warn-box"><p>⚠️ Si vous n'acceptez pas ces CGU dans leur intégralité, vous devez cesser immédiatement d'utiliser la Plateforme.</p></div>
+                        <p>L'Éditeur se réserve le droit de modifier les CGU. En cas de modification substantielle, une notification sera affichée sur la Plateforme. La continuation de l'utilisation après notification vaudra acceptation des nouvelles CGU.</p>
+                    </div>
+
+                    <div class="legal-section" id="services">
+                        <h2><span class="section-num">04</span> Description des services</h2>
+                        <p>La Plateforme Khorba3 propose les services suivants :</p>
+                        <table class="legal-table">
+                            <tr><th>Service</th><th>Description</th><th>Disponibilité</th></tr>
+                            <tr><td>Chatbot LBD AI</td><td>Système de questions-réponses sur les sujets de cybersécurité et géopolitique, alimenté par un modèle de langage local (Gemma)</td><td>Dépend de la disponibilité du serveur local et du tunnel</td></tr>
+                            <tr><td>Veille Actualités Cyber</td><td>Agrégation de flux RSS de sources spécialisées (The Hacker News, Dark Reading, BleepingComputer)</td><td>Temps réel, avec données de secours locales</td></tr>
+                            <tr><td>Formulaire de Contact</td><td>Prise de contact avec l'équipe Khorba3 pour des demandes de consulting ou de démo</td><td>Permanent</td></tr>
+                            <tr><td>Analyse Géopolitique Cyber</td><td>Contenus informatifs sur les enjeux géopolitiques liés au numérique</td><td>Permanent</td></tr>
+                        </table>
+                        <p>Les services sont fournis <strong>"en l'état"</strong> sans garantie de disponibilité continue. L'Éditeur ne peut être tenu responsable d'interruptions liées à des tiers (GitHub Pages, Cloudflare, Ollama).</p>
+                    </div>
+
+                    <div class="legal-section" id="acces">
+                        <h2><span class="section-num">05</span> Accès à la Plateforme</h2>
+                        <p>L'accès à la Plateforme est libre et gratuit. Aucun compte utilisateur n'est requis pour la consultation.</p>
+                        <h3>Conditions techniques</h3>
+                        <ul>
+                            <li>Un navigateur web moderne supportant JavaScript ES6+ (modules) est requis.</li>
+                            <li>L'utilisation du chatbot nécessite une connexion internet active.</li>
+                            <li>La disponibilité du chatbot LBD AI est conditionnée au bon fonctionnement du tunnel Cloudflare et de l'infrastructure n8n/Ollama locale.</li>
+                        </ul>
+                        <h3>Limites d'utilisation du chatbot</h3>
+                        <ul>
+                            <li>Le chatbot LBD AI est limité à <strong>5 questions par session</strong>, afin de garantir la qualité des réponses et la stabilité du système.</li>
+                            <li>Les sessions sont identifiées par un identifiant anonyme local, non lié à une identité personnelle.</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section" id="ia-usage">
+                        <h2><span class="section-num">06</span> Utilisation de l'Intelligence Artificielle</h2>
+                        <span class="norm-badge norm-eu">AI Act — UE 2024/1689</span>
+                        <span class="norm-badge norm-eu">Art. 52 — Transparence IA</span>
+
+                        <h3>Transparence et nature du système IA</h3>
+                        <p>Conformément à l'<strong>Article 52 du Règlement européen sur l'IA (AI Act)</strong>, l'Éditeur informe explicitement les Utilisateurs qu'ils interagissent avec un système d'intelligence artificielle (chatbot LBD AI), et non avec un être humain.</p>
+
+                        <h3>Classification du risque (AI Act Art. 6)</h3>
+                        <p>Le chatbot LBD AI est classifié comme système IA à <strong>risque limité</strong> au sens de l'AI Act, en tant que système d'interaction avec des personnes physiques à vocation informative. Il ne constitue pas un système IA à haut risque (Art. 6 et Annexe III de l'AI Act).</p>
+
+                        <h3>Limitations importantes du système IA</h3>
+                        <div class="warn-box"><p>⚠️ Les réponses générées par LBD AI (modèle Gemma via Ollama) peuvent contenir des inexactitudes, des biais ou des informations obsolètes. Elles ne remplacent en aucun cas un avis d'expert humain qualifié en cybersécurité, en droit ou en géopolitique.</p></div>
+                        <ul>
+                            <li>Le modèle opère <strong>localement</strong> — les données ne sont pas envoyées à des serveurs IA tiers (OpenAI, Google, etc.).</li>
+                            <li>L'IA ne prend pas de décisions automatisées ayant des effets juridiques sur les Utilisateurs.</li>
+                            <li>L'IA n'est pas configurée pour recueillir des données personnelles sensibles (données de santé, opinions politiques, etc.).</li>
+                        </ul>
+
+                        <h3>Droit à l'explication (RGPD Art. 22)</h3>
+                        <p>Tout Utilisateur peut demander des informations sur le fonctionnement du système IA. Contactez : <strong>ghassane@integr-it.com</strong></p>
+                    </div>
+
+                    <div class="legal-section" id="donnees-cgu">
+                        <h2><span class="section-num">07</span> Protection des données personnelles</h2>
+                        <span class="norm-badge norm-eu">RGPD</span>
+                        <span class="norm-badge norm-ca">PIPEDA</span>
+                        <span class="norm-badge norm-ca">Loi 25 — Québec</span>
+
+                        <h3>Principes fondamentaux appliqués</h3>
+                        <p>Le traitement des données personnelles sur la Plateforme respecte les principes de :</p>
+                        <ul>
+                            <li><strong>Licéité, loyauté et transparence</strong> (RGPD Art. 5.1.a / PIPEDA Principe 1)</li>
+                            <li><strong>Limitation des finalités</strong> (RGPD Art. 5.1.b / PIPEDA Principe 2) — Les données ne sont collectées qu'à des fins déterminées, explicites et légitimes.</li>
+                            <li><strong>Minimisation des données</strong> (RGPD Art. 5.1.c) — Seules les données strictement nécessaires sont collectées.</li>
+                            <li><strong>Exactitude</strong> (RGPD Art. 5.1.d) — Les données sont maintenues exactes et à jour.</li>
+                            <li><strong>Limitation de la conservation</strong> (RGPD Art. 5.1.e / Loi 25 Art. 23) — Durées de conservation définies et respectées.</li>
+                            <li><strong>Intégrité et confidentialité</strong> (RGPD Art. 5.1.f / ISO 27001) — Sécurité technique et organisationnelle appropriée.</li>
+                        </ul>
+
+                        <h3>Conformité spécifique Loi 25 (Québec)</h3>
+                        <ul>
+                            <li>Désignation d'un responsable de la protection des renseignements personnels.</li>
+                            <li>Politique de confidentialité accessible publiquement.</li>
+                            <li>Évaluation des facteurs relatifs à la vie privée (EFVP) pour tout nouveau traitement à risque élevé.</li>
+                            <li>Droit à la portabilité des renseignements personnels (Loi 25 Art. 27).</li>
+                            <li>Notification obligatoire de tout incident de confidentialité à la CAI et aux personnes affectées.</li>
+                        </ul>
+
+                        <h3>Partage de données avec des tiers</h3>
+                        <p>Khorba3 ne vend, ne loue et ne commercialise aucune donnée personnelle. Le partage avec des tiers est limité à :</p>
+                        <table class="legal-table">
+                            <tr><th>Tiers</th><th>Données partagées</th><th>Encadrement</th></tr>
+                            <tr><td>GitHub Pages</td><td>Logs d'accès (IP, navigation)</td><td>GitHub Privacy Statement + CCT</td></tr>
+                            <tr><td>Cloudflare</td><td>Données en transit chiffrées TLS 1.3</td><td>Cloudflare DPA + EU-US DPF</td></tr>
+                            <tr><td>Flux RSS (rss2json.com)</td><td>Aucune donnée personnelle</td><td>Requêtes anonymes</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="legal-section" id="securite-cgu">
+                        <h2><span class="section-num">08</span> Sécurité de l'Information</h2>
+                        <span class="norm-badge norm-iso">ISO 27001:2022</span>
+                        <span class="norm-badge norm-iso">ISO 27005:2022</span>
+                        <span class="norm-badge norm-eu">RGPD Art. 25 & 32</span>
+
+                        <h3>Cadre de gestion de la sécurité</h3>
+                        <p>La Plateforme applique les principes de sécurité par conception (<strong>Privacy by Design</strong> — RGPD Art. 25) et de sécurité par défaut (<strong>Privacy by Default</strong>), alignés avec le référentiel ISO 27001:2022 :</p>
+                        <ul>
+                            <li><strong>A.8 — Contrôles liés aux actifs informationnels</strong> : Classification et protection des données traitées.</li>
+                            <li><strong>A.9 — Contrôle d'accès</strong> : Accès aux systèmes restreint selon le principe du moindre privilège.</li>
+                            <li><strong>A.10 — Cryptographie</strong> : Chiffrement TLS 1.3 systématique sur toutes les communications.</li>
+                            <li><strong>A.12 — Sécurité opérationnelle</strong> : Journalisation des accès, surveillance des anomalies.</li>
+                            <li><strong>A.16 — Gestion des incidents</strong> : Procédure de réponse aux incidents définie, notification CNIL en 72h si nécessaire.</li>
+                            <li><strong>A.18 — Conformité</strong> : Respect des obligations légales et réglementaires applicables.</li>
+                        </ul>
+
+                        <h3>Gestion des risques (ISO 27005:2022)</h3>
+                        <p>Une analyse de risques a été conduite selon la méthodologie ISO 27005, couvrant les menaces suivantes :</p>
+                        <table class="legal-table">
+                            <tr><th>Menace identifiée</th><th>Mesure de traitement</th><th>Niveau de risque résiduel</th></tr>
+                            <tr><td>Interception des communications</td><td>Chiffrement TLS 1.3 (Cloudflare)</td><td>Faible</td></tr>
+                            <tr><td>Accès non autorisé au chatbot IA</td><td>Pas de compte utilisateur, données non persistées</td><td>Très faible</td></tr>
+                            <tr><td>Indisponibilité du service (DoS)</td><td>GitHub Pages + Cloudflare CDN</td><td>Moyen</td></tr>
+                            <tr><td>Injection de prompts malveillants</td><td>Traitement local sans exécution de code</td><td>Faible</td></tr>
+                        </table>
+
+                        <h3>Responsabilité de l'Utilisateur en matière de sécurité</h3>
+                        <ul>
+                            <li>Ne pas tenter d'exploiter des vulnérabilités de la Plateforme.</li>
+                            <li>Ne pas soumettre de données personnelles sensibles dans le chatbot.</li>
+                            <li>Signaler tout comportement suspect à : ghassane@integr-it.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section" id="propriete-cgu">
+                        <h2><span class="section-num">09</span> Propriété intellectuelle</h2>
+                        <p>L'ensemble des contenus de la Plateforme (textes, code, visuels, architecture, base de connaissances du chatbot) est protégé par le droit de la propriété intellectuelle et appartient à l'Éditeur ou à ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.</p>
+                        <p>Les Utilisateurs ne bénéficient d'aucun droit de propriété sur les réponses générées par LBD AI — celles-ci sont générées automatiquement et sont la propriété exclusive de l'Éditeur.</p>
+                    </div>
+
+                    <div class="legal-section" id="conduite">
+                        <h2><span class="section-num">10</span> Règles de conduite</h2>
+                        <p>L'Utilisateur s'engage à utiliser la Plateforme de manière responsable et légale. Il lui est expressément interdit de :</p>
+                        <ul>
+                            <li>Soumettre des contenus illicites, diffamatoires, haineux, discriminatoires ou portant atteinte aux droits de tiers.</li>
+                            <li>Tenter de contourner les limites du système IA (injection de prompts, jailbreaking).</li>
+                            <li>Utiliser la Plateforme à des fins de collecte automatisée de données (scraping, bots).</li>
+                            <li>Usurper l'identité d'une personne ou organisation.</li>
+                            <li>Utiliser la Plateforme à des fins d'activités illégales, terroristes ou contraires à l'ordre public.</li>
+                            <li>Tenter d'attaquer l'infrastructure technique de la Plateforme (DDoS, injections, scanning).</li>
+                        </ul>
+                        <div class="warn-box"><p>⚠️ Tout manquement à ces règles peut entraîner le signalement aux autorités compétentes et des poursuites judiciaires.</p></div>
+                    </div>
+
+                    <div class="legal-section" id="responsabilite-cgu">
+                        <h2><span class="section-num">11</span> Limitation de responsabilité</h2>
+                        <h3>Responsabilité de l'Éditeur</h3>
+                        <ul>
+                            <li>L'Éditeur ne garantit pas l'exactitude, l'exhaustivité ou l'actualité des informations fournies par LBD AI.</li>
+                            <li>Les analyses géopolitiques et cyber générées par l'IA sont à caractère informatif uniquement et ne constituent pas des conseils professionnels certifiés.</li>
+                            <li>L'Éditeur décline toute responsabilité pour les décisions prises sur la base des informations de la Plateforme.</li>
+                            <li>La continuité du service n'est pas garantie (infrastructure dépendante de tiers : GitHub, Cloudflare, hébergement local).</li>
+                        </ul>
+                        <h3>Responsabilité de l'Utilisateur</h3>
+                        <p>L'Utilisateur est seul responsable de l'usage qu'il fait des informations obtenues sur la Plateforme et des conséquences de ses interactions avec le système IA.</p>
+                    </div>
+
+                    <div class="legal-section" id="modifications">
+                        <h2><span class="section-num">12</span> Modifications des CGU</h2>
+                        <p>L'Éditeur se réserve le droit de modifier les présentes CGU à tout moment. Les modifications prennent effet dès leur publication sur la Plateforme. En cas de modification importante (au sens du RGPD Art. 13), les Utilisateurs seront notifiés via un bandeau d'information visible sur la Plateforme.</p>
+                        <p>L'historique des versions des CGU est conservé et consultable sur demande auprès du DPO.</p>
+                    </div>
+
+                    <div class="legal-section" id="resiliation">
+                        <h2><span class="section-num">13</span> Résiliation et suspension d'accès</h2>
+                        <p>L'Éditeur se réserve le droit de suspendre ou de restreindre l'accès à la Plateforme pour tout Utilisateur qui ne respecterait pas les présentes CGU, sans préavis et sans indemnité.</p>
+                        <p>En cas de manquement grave (tentative d'intrusion, utilisation frauduleuse), l'Éditeur se réserve le droit d'engager des poursuites judiciaires.</p>
+                    </div>
+
+                    <div class="legal-section" id="droit-cgu">
+                        <h2><span class="section-num">14</span> Droit applicable et règlement des litiges</h2>
+                        <h3>Droit applicable</h3>
+                        <p>Les présentes CGU sont régies par le droit français, sans préjudice des dispositions impératives applicables dans le pays de résidence de l'Utilisateur (notamment le droit européen pour les résidents UE, la PIPEDA et la Loi 25 pour les résidents canadiens).</p>
+                        <h3>Règlement amiable</h3>
+                        <p>En cas de litige, les parties s'engagent à rechercher une solution amiable dans un délai de 30 jours avant tout recours judiciaire. Contact : ghassane@integr-it.com</p>
+                        <h3>Médiation de la consommation (UE)</h3>
+                        <p>Conformément à la Directive 2013/11/UE, les utilisateurs européens peuvent recourir à une médiation en ligne via la plateforme ODR de la Commission européenne : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" style="color:var(--primary)">ec.europa.eu/consumers/odr</a></p>
+                        <h3>Juridiction compétente</h3>
+                        <p>À défaut de résolution amiable, tout litige sera soumis à la juridiction des tribunaux compétents du ressort du domicile de l'Éditeur, sauf disposition légale contraire applicable à l'Utilisateur.</p>
+                    </div>
+
+                    <div class="legal-section" id="contact-cgu">
+                        <h2><span class="section-num">15</span> Contact</h2>
+                        <div class="info-box">
+                            <p>
+                                <strong>Pour toute question relative aux présentes CGU ou à la protection de vos données :</strong><br><br>
+                                📧 <strong>Email DPO :</strong> ghassane@integr-it.com<br>
+                                📌 <strong>Objet à mentionner :</strong> "CGU / RGPD — [Votre demande]"<br>
+                                ⏱️ <strong>Délai de réponse :</strong> 30 jours calendaires maximum<br><br>
+                                <strong>Autorités de contrôle compétentes :</strong><br>
+                                🇫🇷 <strong>CNIL</strong> (France) — <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--primary)">www.cnil.fr</a><br>
+                                🇨🇦 <strong>CAI Québec</strong> — <a href="https://www.cai.gouv.qc.ca" target="_blank" rel="noopener" style="color:var(--primary)">www.cai.gouv.qc.ca</a><br>
+                                🇪🇺 <strong>CEPD</strong> (Comité Européen de Protection des Données) — <a href="https://edpb.europa.eu" target="_blank" rel="noopener" style="color:var(--primary)">edpb.europa.eu</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 2rem 0; border-top: 1px solid var(--glass-border); text-align:center;">
+        <p style="color:var(--text-muted); font-size:0.85rem;">&copy; 2026 Khorba3. — <a href="mentions-legales.html" style="color:var(--primary)">Mentions légales</a> — <a href="cgu.html" style="color:var(--primary)">CGU</a></p>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('particle-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+            const pts = Array.from({length:30}, () => ({x:Math.random()*canvas.width, y:Math.random()*canvas.height, vx:(Math.random()-.5)*.2, vy:(Math.random()-.5)*.2, s:Math.random()*1.5+.5}));
+            function draw() {
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                pts.forEach(p => { p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>canvas.width)p.vx*=-1; if(p.y<0||p.y>canvas.height)p.vy*=-1; ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fillStyle='rgba(0,229,255,0.15)'; ctx.fill(); });
+                requestAnimationFrame(draw);
+            }
+            draw();
+            window.addEventListener('resize', () => { canvas.width=window.innerWidth; canvas.height=window.innerHeight; });
+        }
+        window.addEventListener('scroll', () => document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 50));
+    </script>
+</body>
+</html>

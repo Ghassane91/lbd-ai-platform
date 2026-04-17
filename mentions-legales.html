@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales — Khorba3</title>
+    <meta name="description" content="Mentions légales de la plateforme Khorba3. Informations sur l'éditeur, l'hébergement, la protection des données et la propriété intellectuelle.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .legal-page { padding: 8rem 0 5rem; min-height: 100vh; }
+        .legal-back { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 600; margin-bottom: 2.5rem; transition: var(--transition); font-size: 0.9rem; text-decoration: none; }
+        .legal-back:hover { gap: 0.8rem; }
+        .legal-hero { margin-bottom: 3rem; }
+        .legal-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-top: 1rem; margin-bottom: 0.5rem; }
+        .legal-hero .last-update { color: var(--text-muted); font-size: 0.85rem; font-family: var(--mono); }
+        .legal-body { display: flex; gap: 3rem; align-items: flex-start; }
+        .legal-nav { position: sticky; top: 6rem; width: 260px; flex-shrink: 0; background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius); padding: 1.5rem; }
+        .legal-nav h4 { color: var(--primary); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .legal-nav a { display: block; color: var(--text-muted); font-size: 0.85rem; padding: 0.4rem 0; border-left: 2px solid transparent; padding-left: 0.8rem; margin-left: -0.8rem; transition: 0.2s; text-decoration: none; }
+        .legal-nav a:hover { color: var(--primary); border-left-color: var(--primary); padding-left: 1rem; }
+        .legal-content { flex: 1; max-width: 780px; }
+        .legal-section { margin-bottom: 3.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid var(--glass-border); }
+        .legal-section:last-child { border-bottom: none; }
+        .legal-section h2 { font-size: 1.5rem; margin-bottom: 1.2rem; color: var(--text); display: flex; align-items: center; gap: 0.8rem; }
+        .legal-section h2 .section-num { color: var(--primary); font-family: var(--mono); font-size: 1rem; }
+        .legal-section h3 { font-size: 1.1rem; color: var(--primary); margin: 1.5rem 0 0.8rem; }
+        .legal-section p { color: var(--text-muted); margin-bottom: 1rem; line-height: 1.8; font-size: 0.95rem; }
+        .legal-section ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+        .legal-section ul li { color: var(--text-muted); padding: 0.4rem 0 0.4rem 1.5rem; position: relative; font-size: 0.95rem; line-height: 1.7; }
+        .legal-section ul li::before { content: '›'; position: absolute; left: 0; color: var(--primary); font-weight: 700; }
+        .info-box { background: rgba(0, 229, 255, 0.04); border: 1px solid rgba(0, 229, 255, 0.15); border-radius: var(--radius-sm); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+        .info-box p { margin: 0; color: var(--text); }
+        .norm-badge { display: inline-block; padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.72rem; font-weight: 700; font-family: var(--mono); letter-spacing: 1px; margin-right: 0.4rem; margin-bottom: 0.4rem; }
+        .norm-eu { background: rgba(0, 112, 240, 0.15); color: #4da6ff; border: 1px solid rgba(0, 112, 240, 0.3); }
+        .norm-ca { background: rgba(229, 35, 35, 0.12); color: #ff7070; border: 1px solid rgba(229, 35, 35, 0.25); }
+        .norm-iso { background: rgba(124, 58, 237, 0.15); color: #a78bfa; border: 1px solid rgba(124, 58, 237, 0.3); }
+        .legal-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.88rem; }
+        .legal-table th { background: rgba(0,229,255,0.06); color: var(--primary); padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--glass-border); font-weight: 600; }
+        .legal-table td { padding: 0.8rem 1rem; color: var(--text-muted); border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: top; }
+        .legal-table tr:hover td { background: rgba(255,255,255,0.02); }
+        @media (max-width: 900px) { .legal-body { flex-direction: column; } .legal-nav { position: static; width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <header id="main-header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28">
+                    <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+                    <circle cx="16" cy="16" r="8" stroke="var(--primary)" stroke-width="2" fill="none"/>
+                    <circle cx="16" cy="16" r="3" fill="var(--primary)"/>
+                    <line x1="16" y1="2" x2="16" y2="8" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="16" y1="24" x2="16" y2="30" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="2" y1="16" x2="8" y2="16" stroke="var(--primary)" stroke-width="1.5"/>
+                    <line x1="24" y1="16" x2="30" y2="16" stroke="var(--primary)" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">Khorba<span class="accent">3</span></span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="legal-page">
+        <div class="container">
+            <a href="index.html" class="legal-back">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                Retour à l'accueil
+            </a>
+
+            <div class="legal-hero">
+                <div class="badge">Informations Légales</div>
+                <h1>Mentions <span class="gradient-text">Légales</span></h1>
+                <p class="last-update">Dernière mise à jour : 17 Avril 2026 — Version 1.0</p>
+                <div style="margin-top:1rem;">
+                    <span class="norm-badge norm-eu">RGPD / EU 2016/679</span>
+                    <span class="norm-badge norm-ca">PIPEDA · Loi 25 (Québec)</span>
+                    <span class="norm-badge norm-iso">ISO 27001 · ISO 27005</span>
+                </div>
+            </div>
+
+            <div class="legal-body">
+                <nav class="legal-nav">
+                    <h4>Navigation</h4>
+                    <a href="#editeur">1. Éditeur du site</a>
+                    <a href="#hebergement">2. Hébergement</a>
+                    <a href="#propriete">3. Propriété intellectuelle</a>
+                    <a href="#donnees">4. Données personnelles</a>
+                    <a href="#cookies">5. Cookies</a>
+                    <a href="#securite">6. Sécurité de l'information</a>
+                    <a href="#responsabilite">7. Responsabilité</a>
+                    <a href="#droit">8. Droit applicable</a>
+                    <a href="#contact-legal">9. Contact DPO</a>
+                </nav>
+
+                <div class="legal-content">
+
+                    <div class="legal-section" id="editeur">
+                        <h2><span class="section-num">01</span> Éditeur du site</h2>
+                        <p>Le site <strong>Khorba3</strong> (accessible à l'adresse <code>https://ghassane91.github.io/lbd-ai-platform/</code>) est édité par :</p>
+                        <table class="legal-table">
+                            <tr><th>Information</th><th>Détail</th></tr>
+                            <tr><td>Dénomination</td><td>Khorba3 — Plateforme d'Intelligence Cyber-Géopolitique</td></tr>
+                            <tr><td>Responsable de publication</td><td>Ghassane — Administrateur de la plateforme</td></tr>
+                            <tr><td>Email de contact</td><td>ghassane@integr-it.com</td></tr>
+                            <tr><td>Statut</td><td>Projet à vocation professionnelle et pédagogique</td></tr>
+                        </table>
+                        <div class="info-box"><p>📌 En application des articles 6-III et 19 de la Loi pour la Confiance dans l'Économie Numérique (LCEN) du 21 juin 2004, ces mentions légales sont affichées de manière permanente et accessible.</p></div>
+                    </div>
+
+                    <div class="legal-section" id="hebergement">
+                        <h2><span class="section-num">02</span> Hébergement du site</h2>
+                        <p>Le site est hébergé par la société <strong>GitHub, Inc.</strong> via la solution <strong>GitHub Pages</strong> :</p>
+                        <table class="legal-table">
+                            <tr><th>Information</th><th>Détail</th></tr>
+                            <tr><td>Hébergeur</td><td>GitHub, Inc.</td></tr>
+                            <tr><td>Adresse</td><td>88 Colin P Kelly Jr Street, San Francisco, CA 94107, USA</td></tr>
+                            <tr><td>Site web</td><td>https://github.com</td></tr>
+                            <tr><td>Contact hébergeur</td><td>https://support.github.com</td></tr>
+                        </table>
+                        <p>Le chatbot LBD AI est rattaché à une infrastructure de traitement de données hébergée localement, accessible via un tunnel sécurisé Cloudflare.</p>
+                    </div>
+
+                    <div class="legal-section" id="propriete">
+                        <h2><span class="section-num">03</span> Propriété intellectuelle</h2>
+                        <p>L'ensemble des éléments constituant ce site (textes, graphismes, logotech, code source, architecture) est protégé par le droit de la propriété intellectuelle.</p>
+                        <h3>Protection des contenus</h3>
+                        <ul>
+                            <li>Toute reproduction, représentation, modification ou adaptation, totale ou partielle, est interdite sans autorisation expresse et écrite.</li>
+                            <li>Les marques, logos et noms de domaine apparaissant sur le site sont des marques déposées ou en cours de dépôt.</li>
+                            <li>Les actualités relayées (flux RSS) demeurent la propriété de leurs auteurs respectifs et sont soumises à leurs propres conditions d'utilisation.</li>
+                        </ul>
+                        <h3>Technologies et Logiciels Tiers</h3>
+                        <ul>
+                            <li><strong>n8n</strong> : Plateforme d'automatisation open-source (Licence Sustainable Use Licence)</li>
+                            <li><strong>Ollama / Gemma</strong> : Moteur local de modèles de langage (Apache 2.0)</li>
+                            <li><strong>Cloudflare Tunnel</strong> : Service de tunneling sécurisé (Cloudflare ToS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-section" id="donnees">
+                        <h2><span class="section-num">04</span> Protection des données personnelles</h2>
+                        <span class="norm-badge norm-eu">RGPD Art. 13-14</span>
+                        <span class="norm-badge norm-ca">PIPEDA S.5</span>
+                        <span class="norm-badge norm-ca">Loi 25 Québec</span>
+
+                        <h3>Responsable du traitement</h3>
+                        <p>Ghassane — <strong>ghassane@integr-it.com</strong> — est le Responsable du Traitement au sens du RGPD (Règlement UE 2016/679) et de la Loi 25 du Québec (Loi modernisant des dispositions législatives en matière de protection des renseignements personnels).</p>
+
+                        <h3>Données collectées</h3>
+                        <table class="legal-table">
+                            <tr><th>Type de donnée</th><th>Source</th><th>Finalité</th><th>Durée de conservation</th></tr>
+                            <tr><td>Messages du chatbot</td><td>Saisie utilisateur</td><td>Traitement IA local — réponse contextuelle</td><td>Session active uniquement</td></tr>
+                            <tr><td>Données du formulaire de contact (nom, email, téléphone)</td><td>Formulaire Contact</td><td>Prise de contact commerciale</td><td>3 ans maximum</td></tr>
+                            <tr><td>Identifiants de session</td><td>Génération locale (JS)</td><td>Suivi de la conversation</td><td>Durée de la session navigateur</td></tr>
+                            <tr><td>Logs d'accès</td><td>GitHub Pages / Cloudflare</td><td>Sécurité et diagnostic technique</td><td>30 jours</td></tr>
+                        </table>
+
+                        <h3>Bases légales du traitement (RGPD Art. 6)</h3>
+                        <ul>
+                            <li><strong>Consentement (Art. 6.1.a)</strong> : Pour l'utilisation du chatbot IA.</li>
+                            <li><strong>Intérêt légitime (Art. 6.1.f)</strong> : Pour les logs de sécurité et la maintenance du système.</li>
+                            <li><strong>Exécution d'un contrat (Art. 6.1.b)</strong> : Pour le traitement des demandes de contact.</li>
+                        </ul>
+
+                        <h3>Vos droits</h3>
+                        <p>Conformément au RGPD (Articles 15 à 21) et à la Loi 25 québécoise, vous disposez des droits suivants :</p>
+                        <ul>
+                            <li><strong>Droit d'accès</strong> : Obtenir une copie de vos données personnelles.</li>
+                            <li><strong>Droit de rectification</strong> : Corriger des données inexactes.</li>
+                            <li><strong>Droit à l'effacement</strong> : Demander la suppression de vos données ("droit à l'oubli").</li>
+                            <li><strong>Droit à la portabilité</strong> : Récupérer vos données dans un format structuré.</li>
+                            <li><strong>Droit d'opposition</strong> : Vous opposer à certains traitements.</li>
+                            <li><strong>Droit de déposer une plainte</strong> : Auprès de la CNIL (France), de la CAI (Québec) ou de l'ICO (Royaume-Uni).</li>
+                        </ul>
+                        <div class="info-box"><p>📬 Pour exercer vos droits, contactez notre DPO à l'adresse : <strong>ghassane@integr-it.com</strong> avec la mention "Exercice de droits RGPD" en objet. Réponse garantie sous 30 jours.</p></div>
+
+                        <h3>Transferts de données hors UE</h3>
+                        <p>Le traitement IA est effectué localement sur infrastructure privée. Une partie des données techniques transite via GitHub (USA) et Cloudflare (USA), encadrés par des <strong>Clauses Contractuelles Types (CCT)</strong> conformes au RGPD et soumis au <strong>EU-US Data Privacy Framework</strong>.</p>
+                    </div>
+
+                    <div class="legal-section" id="cookies">
+                        <h2><span class="section-num">05</span> Cookies et traceurs</h2>
+                        <span class="norm-badge norm-eu">Directive ePrivacy 2002/58/CE</span>
+                        <p>Le site utilise uniquement des cookies fonctionnels strictement nécessaires au bon fonctionnement du service :</p>
+                        <table class="legal-table">
+                            <tr><th>Cookie</th><th>Type</th><th>Finalité</th><th>Durée</th></tr>
+                            <tr><td>lbd_session_id</td><td>Fonctionnel</td><td>Maintenir la cohérence des échanges avec le chatbot</td><td>Durée de la session</td></tr>
+                            <tr><td>site-lang</td><td>Fonctionnel</td><td>Mémoriser la langue choisie par l'utilisateur</td><td>12 mois</td></tr>
+                        </table>
+                        <p>Aucun cookie publicitaire, de tracking ou d'analyse comportementale n'est utilisé sur ce site. Aucun outil de type Google Analytics n'est déployé.</p>
+                    </div>
+
+                    <div class="legal-section" id="securite">
+                        <h2><span class="section-num">06</span> Sécurité de l'information</h2>
+                        <span class="norm-badge norm-iso">ISO 27001:2022</span>
+                        <span class="norm-badge norm-iso">ISO 27005:2022</span>
+                        <span class="norm-badge norm-eu">RGPD Art. 32</span>
+
+                        <h3>Mesures techniques et organisationnelles</h3>
+                        <p>Conformément à l'article 32 du RGPD et aux exigences des normes ISO 27001:2022 (Systèmes de Management de la Sécurité de l'Information) et ISO 27005:2022 (Gestion des risques liés à la sécurité de l'information), les mesures suivantes sont appliquées :</p>
+                        <ul>
+                            <li><strong>Chiffrement des communications</strong> : TLS 1.3 systématiquement appliqué sur toutes les communications (GitHub Pages + Cloudflare Tunnel).</li>
+                            <li><strong>Isolation du traitement IA</strong> : Les modèles de langage s'exécutent localement, sans envoi de données à des tiers.</li>
+                            <li><strong>Contrôle d'accès</strong> : Accès aux systèmes de traitement restreint aux seuls administrateurs autorisés.</li>
+                            <li><strong>Ségrégation des données</strong> : Les données de conversation ne sont pas persistées en base de données par défaut.</li>
+                            <li><strong>Surveillance des incidents</strong> : Logs d'accès conservés 30 jours pour détection d'intrusions.</li>
+                            <li><strong>Évaluation des risques</strong> : Analyse des risques conduite selon la méthodologie ISO 27005 (identification, évaluation, traitement des risques).</li>
+                        </ul>
+
+                        <h3>Notification d'incidents (RGPD Art. 33-34)</h3>
+                        <p>En cas de violation de données personnelles, les autorités de contrôle compétentes seront notifiées dans les <strong>72 heures</strong> suivant la détection de l'incident, conformément à l'Article 33 du RGPD.</p>
+                    </div>
+
+                    <div class="legal-section" id="responsabilite">
+                        <h2><span class="section-num">07</span> Limitation de responsabilité</h2>
+                        <p>Khorba3 s'efforce de fournir des informations exactes et à jour. Toutefois, la responsabilité de l'éditeur ne saurait être engagée pour :</p>
+                        <ul>
+                            <li>Les informations produites par le chatbot IA (LBD AI) : les réponses générées ont une valeur indicative et ne constituent pas un conseil juridique, financier ou de sécurité certifié.</li>
+                            <li>Les interruptions de service liées à la nature du tunnel Cloudflare (service "Quick Tunnel" sans garantie de disponibilité SLA).</li>
+                            <li>Les contenus des sites tiers accessibles via les liens présents sur la plateforme.</li>
+                            <li>Tout dommage résultant d'une intrusion malveillante malgré les mesures de sécurité mises en place.</li>
+                        </ul>
+                        <div class="info-box"><p>⚠️ Les analyses géopolitiques et cyber fournies par LBD AI sont générées par intelligence artificielle. Elles doivent être considérées comme des points de départ à la réflexion et non comme des vérités absolues.</p></div>
+                    </div>
+
+                    <div class="legal-section" id="droit">
+                        <h2><span class="section-num">08</span> Droit applicable et juridiction</h2>
+                        <p>Les présentes mentions légales sont régies par le droit français, en conformité avec :</p>
+                        <ul>
+                            <li>Règlement (UE) 2016/679 — RGPD</li>
+                            <li>Loi n° 78-17 du 6 janvier 1978 — Loi Informatique et Libertés</li>
+                            <li>Loi n° 2004-575 du 21 juin 2004 — LCEN</li>
+                            <li>Loi canadienne sur la protection des renseignements personnels et les documents électroniques (PIPEDA)</li>
+                            <li>Loi modernisant des dispositions législatives en matière de protection des renseignements personnels (Loi 25 — Québec)</li>
+                        </ul>
+                        <p>Tout litige relatif au site sera soumis à la juridiction des tribunaux compétents du ressort du domicile de l'éditeur.</p>
+                    </div>
+
+                    <div class="legal-section" id="contact-legal">
+                        <h2><span class="section-num">09</span> Contact du Délégué à la Protection des Données</h2>
+                        <div class="info-box">
+                            <p>
+                                <strong>Email DPO :</strong> ghassane@integr-it.com<br>
+                                <strong>Objet à mentionner :</strong> "RGPD / Protection des données — [Votre demande]"<br>
+                                <strong>Délai de réponse :</strong> 30 jours calendaires maximum<br><br>
+                                <strong>Autorité de contrôle :</strong><br>
+                                🇫🇷 CNIL — <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--primary)">www.cnil.fr</a><br>
+                                🇨🇦 CAI Québec — <a href="https://www.cai.gouv.qc.ca" target="_blank" rel="noopener" style="color:var(--primary)">www.cai.gouv.qc.ca</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 2rem 0; border-top: 1px solid var(--glass-border); text-align:center;">
+        <p style="color:var(--text-muted); font-size:0.85rem;">&copy; 2026 Khorba3. — <a href="mentions-legales.html" style="color:var(--primary)">Mentions légales</a> — <a href="cgu.html" style="color:var(--primary)">CGU</a></p>
+    </footer>
+
+    <script>
+        // Particles
+        const canvas = document.getElementById('particle-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+            const pts = Array.from({length:30}, () => ({x:Math.random()*canvas.width, y:Math.random()*canvas.height, vx:(Math.random()-.5)*.2, vy:(Math.random()-.5)*.2, s:Math.random()*1.5+.5}));
+            function draw() {
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                pts.forEach(p => { p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>canvas.width)p.vx*=-1; if(p.y<0||p.y>canvas.height)p.vy*=-1; ctx.beginPath(); ctx.arc(p.x,p.y,p.s,0,Math.PI*2); ctx.fillStyle='rgba(0,229,255,0.15)'; ctx.fill(); });
+                requestAnimationFrame(draw);
+            }
+            draw();
+            window.addEventListener('resize', () => { canvas.width=window.innerWidth; canvas.height=window.innerHeight; });
+        }
+        // Header scroll
+        window.addEventListener('scroll', () => document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 50));
+    </script>
+</body>
+</html>
