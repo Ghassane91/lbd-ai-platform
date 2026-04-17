@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://rob-mag-tears-spell.trycloudflare.com/webhook/chat-web',
+    n8nWebhookUrl: 'https://rob-mag-tears-spell.trycloudflare.com/webhook/geotech-bot-webhook',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
@@ -343,7 +343,7 @@ function initChatbot() {
             const response = await fetch(CONFIG.n8nWebhookUrl, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ text: message, session_id: SESSION_ID })
+                body: JSON.stringify({ chatInput: message, question: message, session_id: SESSION_ID })
             });
 
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
