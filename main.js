@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://fancy-singers-type.loca.lt/webhook/chat-web',
+    n8nWebhookUrl: 'https://mean-loops-follow.loca.lt/webhook/chat-web',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
@@ -56,7 +56,7 @@ const TRANSLATIONS = {
         footer_about: "À propos", footer_careers: "Carrières", footer_press: "Presse",
         footer_legal: "Mentions légales", footer_privacy: "Politique de confidentialité", footer_terms: "CGU",
         footer_copy: "© 2026 Khorba3. Tous droits réservés.",
-        bot_placeholder: "Posez votre question à Khorba3..."
+        bot_placeholder: "Posez votre question à LBD AI..."
     },
     en: {
         doc_title: "Khorba3 | Geopolitical Intelligence & Cybersecurity",
@@ -97,7 +97,7 @@ const TRANSLATIONS = {
         footer_about: "About", footer_careers: "Careers", footer_press: "Press",
         footer_legal: "Legal notice", footer_privacy: "Privacy policy", footer_terms: "Terms of use",
         footer_copy: "© 2026 Khorba3. All rights reserved.",
-        bot_placeholder: "Ask Khorba3 your question..."
+        bot_placeholder: "Ask LBD AI your question..."
     },
     es: {
         doc_title: "LBD AI | Inteligencia Geopolítica & Ciberseguridad",
