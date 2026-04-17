@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://mean-loops-follow.loca.lt/webhook/chat-web',
+    n8nWebhookUrl: 'https://cruel-lights-live.loca.lt/webhook/chat-web',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
