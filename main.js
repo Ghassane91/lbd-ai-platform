@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://across-immediate-moments-hampton.trycloudflare.com/webhook/geotech-bot-webhook',
+    n8nWebhookUrl: 'https://defeat-courses-rather-gather.trycloudflare.com/webhook/geotech-bot-webhook',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
