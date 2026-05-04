@@ -3,7 +3,7 @@
 // ============================================
 
 const CONFIG = {
-    n8nWebhookUrl: 'https://defeat-courses-rather-gather.trycloudflare.com/webhook/geotech-bot-webhook',
+    n8nWebhookUrl: 'https://guarantee-cigarette-skills-candy.trycloudflare.com/webhook/geotech-bot-webhook',
     newsRefreshInterval: 300000,
     defaultLang: 'fr'
 };
